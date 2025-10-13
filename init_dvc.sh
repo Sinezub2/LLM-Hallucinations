@@ -11,8 +11,8 @@ mkdir -p .dvc
 
 # Check if dvc_key.txt exists, if not create it with random 32-character string
 if [ ! -f ".dvc/dvc_key.txt" ]; then
-    # Generate random 32-character string (alphanumeric)
-    random_key=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+    # Generate random 32-character string using Python
+    random_key=$(python3 -c "import secrets; import string; print(''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(32)))")
     echo "$random_key" > .dvc/dvc_key.txt
     echo "Created new dvc_key.txt with random key"
 else
