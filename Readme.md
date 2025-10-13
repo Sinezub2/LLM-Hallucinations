@@ -9,7 +9,7 @@ The example solution could be seen in files solution.py. The environment that it
 1. Run ./init_dvc.sh. This will allow you to properly initiate dvc (data version control) that we will use to store large files (like model weigths)
 2. To submit your solution use following commands:
 ```bash
-dvc add <model checkpoint path>
+dvc add <model checkpoint path> # important: checkpoint should be in the same directory as other project files
 dvc push  # upload model weights to S3
 git add . # commit the rest of files
 git commit -m "Solution"
