@@ -1,8 +1,5 @@
 # Hallucination Resistance in Large Language Models
 
-## Problem statement
-
-
 The example solution could be seen in files solution.py. The environment that it will use is provided in Dockerfile. You can customize Dockerfile to your needs.
 
 ## Submitting your solution
