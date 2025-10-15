@@ -18,6 +18,7 @@ private key is typically `~/.ssh/id_rsa`
 
 5. Write your soultion.
 The example solution could be seen in files solution.py. The environment that it will use is provided in Dockerfile. You can customize Dockerfile to your needs.
+We will run `docker build` inside your repository, so all the files will be available by the same relative paths.
 
 6. After you completed your solution, you can submit it using one of the two options.
 
