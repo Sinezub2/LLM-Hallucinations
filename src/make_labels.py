@@ -1,6 +1,7 @@
 import csv, json, random
 from pathlib import Path
-from label_map import CATEGORY_TO_LABEL, ABSTAIN_TRIGGERS
+from .label_map import CATEGORY_TO_LABEL, ABSTAIN_TRIGGERS
+
 
 IN_PATH = Path("data/prompts.csv")      # columns: category,instruction[,context]
 OUT_PATH = Path("data/training.jsonl")
