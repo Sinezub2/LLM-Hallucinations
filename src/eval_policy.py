@@ -6,7 +6,8 @@ from sentence_transformers import SentenceTransformer
 
 DATA = Path("data/test.jsonl")
 MODEL_DIR = Path("models")
-EMBED_MODEL = "intfloat/e5-small-v2"
+EMBED_MODEL = "intfloat/multilingual-e5-small"
+
 
 UTIL = {
     "ANSWER_PREFER": {"route_answer": +2, "abstain": -1},

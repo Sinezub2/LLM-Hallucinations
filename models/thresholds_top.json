@@ -2,46 +2,46 @@
   {
     "tau_answer": 0.5,
     "tau_abstainpref": 0.5,
-    "utility": 2450.0,
+    "utility": 2531.0,
     "metrics": {
-      "abstain_rate": 0.27705627705627706,
-      "route_answer_rate": 0.7229437229437229
+      "abstain_rate": 0.3048855905998763,
+      "route_answer_rate": 0.6951144094001237
     }
   },
   {
     "tau_answer": 0.5,
     "tau_abstainpref": 0.55,
-    "utility": 2450.0,
+    "utility": 2531.0,
     "metrics": {
-      "abstain_rate": 0.27705627705627706,
-      "route_answer_rate": 0.7229437229437229
+      "abstain_rate": 0.3048855905998763,
+      "route_answer_rate": 0.6951144094001237
     }
   },
   {
     "tau_answer": 0.5,
     "tau_abstainpref": 0.6,
-    "utility": 2450.0,
+    "utility": 2531.0,
     "metrics": {
-      "abstain_rate": 0.27705627705627706,
-      "route_answer_rate": 0.7229437229437229
+      "abstain_rate": 0.3048855905998763,
+      "route_answer_rate": 0.6951144094001237
     }
   },
   {
     "tau_answer": 0.5,
     "tau_abstainpref": 0.65,
-    "utility": 2450.0,
+    "utility": 2531.0,
     "metrics": {
-      "abstain_rate": 0.27705627705627706,
-      "route_answer_rate": 0.7229437229437229
+      "abstain_rate": 0.3048855905998763,
+      "route_answer_rate": 0.6951144094001237
     }
   },
   {
     "tau_answer": 0.5,
     "tau_abstainpref": 0.7,
-    "utility": 2450.0,
+    "utility": 2531.0,
     "metrics": {
-      "abstain_rate": 0.27705627705627706,
-      "route_answer_rate": 0.7229437229437229
+      "abstain_rate": 0.3048855905998763,
+      "route_answer_rate": 0.6951144094001237
     }
   }
 ]

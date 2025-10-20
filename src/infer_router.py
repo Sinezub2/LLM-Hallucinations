@@ -6,7 +6,8 @@ from joblib import load
 from sentence_transformers import SentenceTransformer
 
 MODEL_DIR = Path("models")
-EMBED_MODEL = "intfloat/e5-small-v2"
+EMBED_MODEL = "intfloat/multilingual-e5-small"
+
 # --- add near the top, with thresholds ---
 MARGIN_DELTA = 0.10  # how much ABSTAIN_PREFER must beat ANSWER_PREFER to force abstain-prefer
 

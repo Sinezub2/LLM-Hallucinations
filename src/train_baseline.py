@@ -11,7 +11,8 @@ DATA_DIR = Path("data")
 MODEL_DIR = Path("models")
 MODEL_DIR.mkdir(exist_ok=True, parents=True)
 
-EMBED_MODEL = "intfloat/e5-small-v2"   # compact, high-quality encoder
+EMBED_MODEL = "intfloat/multilingual-e5-small"
+   # compact, high-quality encoder
 
 def load_split(name):
     path = DATA_DIR / f"{name}.jsonl"

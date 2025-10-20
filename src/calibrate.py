@@ -17,7 +17,7 @@ def main():
     meta = load(MODEL_DIR / "meta.joblib")
     clf = load(MODEL_DIR / "clf.joblib")
     from sentence_transformers import SentenceTransformer
-    embedder = SentenceTransformer("intfloat/e5-small-v2")
+    embedder = SentenceTransformer("intfloat/multilingual-e5-small")
 
     X_val, y_val = load_split("val")
     Xv = embedder.encode(X_val, batch_size=64, normalize_embeddings=True, show_progress_bar=True)

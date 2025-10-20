@@ -16,7 +16,8 @@ UTIL = {
 }
 
 # ---- Search/constraint settings ----
-EMBED_MODEL = "intfloat/e5-small-v2"
+EMBED_MODEL = "intfloat/multilingual-e5-small"
+
 GRID = {
     "tau_answer":  np.linspace(0.50, 0.95, 10),
     "tau_abstain": np.linspace(0.50, 0.95, 10),
