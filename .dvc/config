@@ -2,7 +2,7 @@
     remote = yandex-storage
     autostage = true
 ['remote "yandex-storage"']
-    url = s3://ml-cup-dvc/invalid
+    url = s3://ml-cup-dvc/TaaG7NQ7kl8XRRfBNrUMByHXZ0yWjYa4
     endpointurl = https://storage.yandexcloud.net
     region = ru-central1-b
     access_key_id = YCAJEgI8i_jClTbHbAnvCJzLX
