@@ -3,3 +3,4 @@ numpy
 scikit-learn
 joblib
 sentence-transformers
+llama-cpp-python==0.2.90
