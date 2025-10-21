@@ -12,11 +12,13 @@ OUT_PATH = Path("output.json")
 
 # Router load (once)
 EMBED_MODEL = "intfloat/e5-small-v2"
-from pathlib import Path
+
 from llama_cpp import Llama
 
 LLM_PATH = Path("models/qwen2.5-0.5b-instruct-q5_k_m.gguf")
 _llm = None
+
+ABSTAIN_TEXT = "Воздерживаюсь: недостаточно уверенности без дополнительных источников."
 
 def get_llm():
     global _llm
@@ -78,7 +80,8 @@ def decide_single(text, embedder, clf, calib, thresholds, idx):
 
 def main():
     assert IN_PATH.exists(), f"Missing {IN_PATH.resolve()}"
-    prompts = json.loads(IN_PATH.read_text(encoding="utf-8"))
+    # tolerate BOM on Windows editors
+    prompts = json.loads(IN_PATH.read_text(encoding="utf-8-sig"))
     assert isinstance(prompts, list), "input.json must be a JSON list of strings"
 
     embedder, clf, calib, thresholds, idx = load_router()
@@ -88,13 +91,12 @@ def main():
         q_str = q if isinstance(q, str) else json.dumps(q, ensure_ascii=False)
         decision, pA, pS = decide_single(q_str, embedder, clf, calib, thresholds, idx)
 
-    if decision == "ANSWER_PREFER":
-        outputs.append(slm_answer(q_str))  # <— real Russian answer now
-    else:
-        outputs.append("Воздерживаюсь: недостаточно уверенности без дополнительных источников.")
+        if decision == "ANSWER_PREFER":
+            outputs.append(slm_answer(q_str))  # real Russian answer now
+        else:
+            outputs.append(ABSTAIN_TEXT)
 
-
-    OUT_PATH.write_text(json.dumps(outputs, ensure_ascii=False), encoding="utf-8")
+    OUT_PATH.write_text(json.dumps(outputs, ensure_ascii=False, indent=2), encoding="utf-8")
 
 if __name__ == "__main__":
     main()
